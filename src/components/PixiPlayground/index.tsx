@@ -131,7 +131,10 @@ export default function PixiPlayground (props: { mode?: PlaygroundMode, code: st
           `https://pixijs.download/${siteConfig.customFields?.PIXI_VERSION}/pixi.min.js`,
           `https://pixijs.download/${siteConfig.customFields?.PIXI_VERSION}/packages/graphics-extras.js`,
           `https://pixijs.download/${siteConfig.customFields?.PIXI_VERSION}/packages/math-extras.js`,
-          `https://pixijs.download/${siteConfig.customFields?.PIXI_VERSION}/packages/webworker.js`
+          // TODO: this does not work. Any example that requires this needs to not include the `pixi.min.js` script above
+          // so the examples should be the ones to define what dependencies they need
+          // also this does not exist in v6 of pixi so we need to figure out how to handle this
+          `https://pixijs.download/${siteConfig.customFields?.PIXI_VERSION}/webworker.js`
           /* eslint-enable @typescript-eslint/restrict-template-expressions */
         ]
       }}
